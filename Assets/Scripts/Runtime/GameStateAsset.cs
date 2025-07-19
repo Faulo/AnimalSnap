@@ -1,4 +1,6 @@
-﻿using Unity.Properties;
+﻿using System;
+using Unity.AppUI.UI;
+using Unity.Properties;
 using UnityEngine;
 
 namespace Game {
@@ -31,7 +33,7 @@ namespace Game {
 
         int timeInHours => Mathf.RoundToInt(time / 3600);
 
-        int timeInDays => Mathf.CeilToInt(time / DAY);
+        int timeInDays => Mathf.FloorToInt(time / DAY);
 
         [SerializeField]
         internal int timeMultiplier = 60;
@@ -40,11 +42,12 @@ namespace Game {
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
 
         [CreateProperty(ReadOnly = true)]
-        string dayString => $"Day {timeInDays}";
+        DateTime dayString => DateTime.Now.AddDays(timeInDays);
 
         [SerializeField]
         float sunStrength = 1;
 
         internal float sunIntensity => sunStrength * Mathf.Clamp01(Mathf.Cos((normalizedTime * 2 * Mathf.PI) + Mathf.PI));
     }
+
 }

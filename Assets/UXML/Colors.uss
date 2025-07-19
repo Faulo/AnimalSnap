@@ -3,7 +3,8 @@
   --color-neutral-lightest: #fcfcf2;   /* fast weiß, UI-Hintergrund */
   --color-neutral-light:    #d5dde4;   /* hellgrau-blau, Sekundärhintergrund */
   --color-neutral-medium:   #9da0a8;   /* mittleres Grau, z.B. Text auf Hell */
-  --color-neutral-darkest:  #101010;   /* tiefes Schwarz, Text auf Dunkel */
+  --color-neutral-dark:  #101010;   /* tiefes Schwarz, Text auf Dunkel */
+  --color-neutral-darkest:  #000000;   /* tiefes Schwarz, Text auf Dunkel */
   --color-yellow:      #ddac46;   /* Goldgelb, Highlight oder Warnung */
   --color-cyan:      #00a2a8;   /* lebendiges Türkis, Call-to-Action */
   --color-green:     #376e49;   /* gedämpftes Grün, z.B. Bestätigung */

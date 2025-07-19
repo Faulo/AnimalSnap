@@ -4,15 +4,18 @@
     height: 100%;
 }
 
-Label {
+.unity-label {
     -unity-font-style: bold;
-    -unity-text-outline-width: 4px;
+    -unity-text-outline-width: 1px;
     -unity-text-outline-color: var(--color-neutral-dark);
     color: var(--color-neutral-light);
 }
 
 .monospace {
-    -unity-font-definition: resource('FlatSkin/Font/Roboto-Medium');
+    -unity-font-definition: url("project://database/Assets/Plugins/digital-dismay/Digital%20Dismay.otf?fileID=12800000&guid=7c883c4a54f550946bf30333320910b8&type=3#Digital Dismay");
+    -unity-text-outline-width: 2px;
+	font-size: 24px;
+    padding: 0;
 }
 
 Button.unity-button {
@@ -38,6 +41,18 @@ Button.unity-button:focus {
 
 Button.unity-button:disabled {
     color: var(--color-neutral-medium);
+}
+
+Hyperlink.unity-label {
+    color: var(--color-blue);
+}
+
+Hyperlink.unity-label:hover {
+    color: var(--color-cyan);
+}
+
+Hyperlink.unity-label:focus {
+    color: var(--color-cyan);
 }
 
 #unity-tab__header {

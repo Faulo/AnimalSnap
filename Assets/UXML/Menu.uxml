@@ -3,7 +3,7 @@
     <Style src="project://database/Assets/UXML/Colors.uss?fileID=7433441132597879392&amp;guid=4652ec8c5f6421948bb889e9afd53579&amp;type=3#Colors" />
     <ui:VisualElement data-source="project://database/Assets/Resources/GameStateAsset.asset?fileID=11400000&amp;guid=48cde409ee76a834cb81c6cdceac0ef1&amp;type=2#GameStateAsset" style="flex-grow: 1;">
         <ui:VisualElement class="overlay" style="flex-grow: 1;">
-            <ui:Label text="Label" style="-unity-text-align: upper-right;">
+            <ui:Label text="Label" class="monospace" style="-unity-text-align: upper-right;">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="dayString" binding-mode="ToTarget" />
                 </Bindings>
@@ -42,7 +42,10 @@
             </Bindings>
         </ui:VisualElement>
         <ui:VisualElement name="Credits" class="overlay" style="flex-grow: 1; justify-content: center; align-items: center;">
-            <ui:Label text="Animal Snap&#10;A game by Daniel Schulz&#10;&#10;Third-party assets used:&#10;LowPoly Environment Pack&#10;Quirky Series ULTIMATE Pack&#10;12j4nk Palette https://lospec.com/palette-list/12j4nk" style="-unity-text-align: upper-center; font-size: 20px;" />
+            <ui:Label text="Animal Snap&#10;A game by Daniel Schulz&#10;&#10;Third-party assets used:" style="-unity-text-align: upper-center; font-size: 20px;" />
+            <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/environments/landscapes/lowpoly-environment-pack-99479" text="LowPoly Environment Pack" />
+            <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-ultimate-pack-209771" text="Quirky Series ULTIMATE Pack" />
+            <Game.Hyperlink href="https://lospec.com/palette-list/12j4nk" text="12j4nk Palette" />
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showCreditsMenu" binding-mode="ToTarget" />
