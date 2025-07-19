@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6809900033367414610}
   - component: {fileID: 4679957346912730968}
   - component: {fileID: 5673118615345320456}
+  - component: {fileID: 5295880520139662887}
   m_Layer: 0
   m_Name: P_Animal
   m_TagString: Untagged
@@ -77,3 +78,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5295880520139662887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843594489518290314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7830a4e92c0ff5849982dc9bc6a7145d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5673118615345320456}
+  agent: {fileID: 4679957346912730968}
+  destinationMargin: 0.1

@@ -44,6 +44,17 @@ namespace Game {
         [SerializeField]
         internal int timeMultiplier = 60;
 
+        [SerializeField]
+        float timeScaleSlow = 0.5f;
+        [SerializeField]
+        float timeScaleMid = 1f;
+        [SerializeField]
+        float timeScaleFast = 5f;
+        [SerializeField]
+        float timeScaleVeryFast = 10f;
+
+        internal float timeScale => timeScaleVeryFast;
+
         [CreateProperty(ReadOnly = true)]
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
 

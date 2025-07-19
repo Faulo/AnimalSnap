@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Game {
-    public class PlayAnimationBehaviour : StateMachineBehaviour {
+    sealed class PlayAnimationBehaviour : StateMachineBehaviour {
         [SerializeField]
         AnimalAnimation animation;
         [SerializeField]

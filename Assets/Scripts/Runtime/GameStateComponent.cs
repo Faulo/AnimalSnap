@@ -14,14 +14,21 @@ namespace Game {
             asset.ResetState();
         }
 
-        void FixedUpdate() {
+        void Update() {
+            asset.time += Time.deltaTime * asset.timeMultiplier;
+
             switch (asset.mode) {
                 case GameMode.Night:
-                    asset.time += Time.deltaTime * asset.timeMultiplier;
+                    Time.timeScale = asset.timeScale;
+
                     if (asset.time >= asset.timeEnd) {
+                        asset.time = asset.timeEnd;
                         asset.mode = GameMode.Day;
                     }
 
+                    break;
+                default:
+                    Time.timeScale = 0;
                     break;
             }
         }
