@@ -6253,6 +6253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   document: {fileID: 1327631507}
   asset: {fileID: 11400000, guid: 48cde409ee76a834cb81c6cdceac0ef1, type: 2}
+  attachedCamera: {fileID: 1257269096}
+  lastSnapshot: {fileID: 0}
 --- !u!1001 &1351558886
 PrefabInstance:
   m_ObjectHideFlags: 0

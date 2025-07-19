@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550ede7b3d5d34f42a1e4febe0df1919, type: 3}
   m_Name: GameStateAsset
   m_EditorClassIdentifier: 
-  mode: 2
+  mode: 1
   time: 43200
+  timeEnd: 129600
   timeMultiplier: 10000
   sunStrength: 2
+  startingSnapshots:
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
+  snapshots:
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}

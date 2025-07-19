@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Unity.Properties;
 using UnityEngine;
 
@@ -63,6 +65,26 @@ namespace Game {
             time = 12 * 60 * 60;
             mode = GameMode.Day;
             SetTimeEnd();
+
+            foreach (var snapshot in snapshots) {
+                if (snapshot) {
+                    if (startingSnapshots.Contains(snapshot)) {
+                        continue;
+                    }
+
+                    Destroy(snapshot);
+                }
+            }
+
+            snapshots.Clear();
+
+            snapshots.AddRange(startingSnapshots);
         }
+
+        [SerializeField]
+        internal Snapshot[] startingSnapshots = Array.Empty<Snapshot>();
+
+        [SerializeField]
+        internal List<Snapshot> snapshots = new();
     }
 }
