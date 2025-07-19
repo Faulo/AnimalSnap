@@ -1,0 +1,23 @@
+{
+    "name": "Game",
+    "rootNamespace": "",
+    "references": [
+        "Slothsoft.UnityExtensions",
+        "MyBox",
+        "Unity.InputSystem",
+        "Unity.TextMeshPro",
+        "Unity.Cinemachine",
+        "com.leantween",
+        "Slothsoft.Effects",
+        "Unity.AppUI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

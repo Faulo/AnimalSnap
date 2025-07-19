@@ -1,0 +1,16 @@
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+Label {
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    -unity-text-outline-width: 10px;
+    -unity-text-outline-color: rgb(0, 0, 0);
+}
+
+.monospace {
+    -unity-font-definition: resource('FlatSkin/Font/Roboto-Medium');
+}

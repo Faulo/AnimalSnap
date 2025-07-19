@@ -1,0 +1,30 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UXML/Style.uss?fileID=7433441132597879392&amp;guid=a096dc41080015a47b0b99f82b788345&amp;type=3#Style" />
+    <ui:VisualElement data-source="project://database/Assets/Resources/GameStateAsset.asset?fileID=11400000&amp;guid=48cde409ee76a834cb81c6cdceac0ef1&amp;type=2#GameStateAsset" style="flex-grow: 1;">
+        <ui:VisualElement class="overlay" style="flex-grow: 1;">
+            <ui:Label text="Label" class="monospace" style="-unity-text-align: upper-right;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="timeString" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:VisualElement name="ActionMenu" class="overlay" style="flex-grow: 1;">
+            <ui:Label text="Daytime" />
+            <ui:VisualElement style="flex-grow: 1; height: 120px; bottom: 0; position: absolute; width: 100%; background-color: rgba(120, 120, 120, 0.81); flex-direction: row;">
+                <ui:VisualElement style="flex-grow: 4;" />
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:Button text="Sleep" name="Sleep" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="showActionMenu" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="PlaybackMenu" class="overlay" style="flex-grow: 1;">
+            <ui:Label text="Nighttime" />
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="showPlaybackMenu" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
