@@ -14,7 +14,7 @@
 .monospace {
     -unity-font-definition: url("project://database/Assets/Plugins/digital-dismay/Digital%20Dismay.otf?fileID=12800000&guid=7c883c4a54f550946bf30333320910b8&type=3#Digital Dismay");
     -unity-text-outline-width: 2px;
-	font-size: 24px;
+    font-size: 24px;
     padding: 0;
 }
 
@@ -93,4 +93,22 @@ Tab {
 
 #unity-tab__header-image {
     -unity-background-image-tint-color: var(--color-cyan);
+}
+
+Button#Camera {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    background-image: url("project://database/Assets/Art/Shutter.aseprite?fileID=8457802857175238380&guid=c49e3b563d635334cbf3da4560e9348e&type=3#Shutter.aseprite.albedo.png");
+    position: absolute;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.0);
+}
+
+Button#Camera:hover {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.2);
+}
+
+Button#Camera:active {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 1);
 }

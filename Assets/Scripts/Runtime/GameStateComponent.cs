@@ -7,28 +7,23 @@ namespace Game {
         GameStateAsset asset;
 
         void OnEnable() {
-            ResetState();
+            asset.ResetState();
         }
 
         void OnDisable() {
-            ResetState();
+            asset.ResetState();
         }
 
         void FixedUpdate() {
             switch (asset.mode) {
                 case GameMode.Night:
                     asset.time += Time.deltaTime * asset.timeMultiplier;
-                    if (asset.time >= GameStateAsset.DAY + GameStateAsset.NOON) {
+                    if (asset.time >= asset.timeEnd) {
                         asset.mode = GameMode.Day;
                     }
 
                     break;
             }
-        }
-
-        void ResetState() {
-            asset.time = 12 * 60 * 60;
-            asset.mode = GameMode.Day;
         }
     }
 }

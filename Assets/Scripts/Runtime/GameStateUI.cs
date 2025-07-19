@@ -11,7 +11,7 @@ namespace Game {
         GameStateAsset asset;
 
         void Start() {
-            RegisterCallback("Sleep", () => asset.mode = GameMode.Night);
+            RegisterCallback("Sleep", asset.Sleep);
             RegisterCallback("Credits", () => asset.mode = GameMode.Credits);
             RegisterCallback("Back", () => asset.mode = GameMode.Day);
 
@@ -22,10 +22,6 @@ namespace Game {
             foreach (var button in document.rootVisualElement.Query(name).Build().OfType<Button>()) {
                 button.clicked += callback;
             }
-        }
-
-        void OnSleep() {
-            asset.mode = GameMode.Night;
         }
 
         void OnCredits() {

@@ -1,5 +1,4 @@
 ﻿using System;
-using Unity.AppUI.UI;
 using Unity.Properties;
 using UnityEngine;
 
@@ -24,6 +23,8 @@ namespace Game {
 
         [SerializeField]
         internal float time = NOON;
+        [SerializeField]
+        internal int timeEnd = DAY + NOON;
 
         internal float normalizedTime => time / DAY;
 
@@ -48,6 +49,20 @@ namespace Game {
         float sunStrength = 1;
 
         internal float sunIntensity => sunStrength * Mathf.Clamp01(Mathf.Cos((normalizedTime * 2 * Mathf.PI) + Mathf.PI));
-    }
 
+        internal void SetTimeEnd() {
+            timeEnd = (timeInDays * DAY) + DAY + NOON;
+        }
+
+        internal void Sleep() {
+            SetTimeEnd();
+            mode = GameMode.Night;
+        }
+
+        internal void ResetState() {
+            time = 12 * 60 * 60;
+            mode = GameMode.Day;
+            SetTimeEnd();
+        }
+    }
 }

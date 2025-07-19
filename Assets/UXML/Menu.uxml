@@ -36,6 +36,7 @@
             </Bindings>
         </ui:VisualElement>
         <ui:VisualElement name="PlaybackMenu" class="overlay" style="flex-grow: 1;">
+            <ui:Button name="Camera" />
             <ui:Label text="Nighttime" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showPlaybackMenu" binding-mode="ToTarget" />
@@ -46,6 +47,7 @@
             <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/environments/landscapes/lowpoly-environment-pack-99479" text="LowPoly Environment Pack" />
             <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-ultimate-pack-209771" text="Quirky Series ULTIMATE Pack" />
             <Game.Hyperlink href="https://lospec.com/palette-list/12j4nk" text="12j4nk Palette" />
+            <Game.Hyperlink href="https://www.1001fonts.com/digital-dismay-font.html" text="Digital Dismay Font" />
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showCreditsMenu" binding-mode="ToTarget" />

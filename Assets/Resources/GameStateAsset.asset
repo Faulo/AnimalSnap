@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550ede7b3d5d34f42a1e4febe0df1919, type: 3}
   m_Name: GameStateAsset
   m_EditorClassIdentifier: 
-  mode: 1
+  mode: 2
   time: 43200
   timeMultiplier: 10000
   sunStrength: 2
