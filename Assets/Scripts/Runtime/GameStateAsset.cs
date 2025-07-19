@@ -1,5 +1,4 @@
 ﻿using Unity.Properties;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 namespace Game {
@@ -18,6 +17,9 @@ namespace Game {
         [CreateProperty(ReadOnly = true)]
         bool showPlaybackMenu => mode is GameMode.Night;
 
+        [CreateProperty(ReadOnly = true)]
+        bool showCreditsMenu => mode is GameMode.Credits;
+
         [SerializeField]
         internal float time = NOON;
 
@@ -29,11 +31,16 @@ namespace Game {
 
         int timeInHours => Mathf.RoundToInt(time / 3600);
 
+        int timeInDays => Mathf.CeilToInt(time / DAY);
+
         [SerializeField]
         internal int timeMultiplier = 60;
 
         [CreateProperty(ReadOnly = true)]
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
+
+        [CreateProperty(ReadOnly = true)]
+        string dayString => $"Day {timeInDays}";
 
         [SerializeField]
         float sunStrength = 1;

@@ -18,6 +18,10 @@ namespace Game {
             switch (asset.mode) {
                 case GameMode.Night:
                     asset.time += Time.deltaTime * asset.timeMultiplier;
+                    if (asset.time >= GameStateAsset.DAY + GameStateAsset.NOON) {
+                        asset.mode = GameMode.Day;
+                    }
+
                     break;
             }
         }

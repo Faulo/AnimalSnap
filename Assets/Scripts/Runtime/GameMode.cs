@@ -3,5 +3,6 @@
         Nothing,
         Day,
         Night,
+        Credits,
     }
 }

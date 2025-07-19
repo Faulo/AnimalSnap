@@ -4,6 +4,11 @@
         <ui:VisualElement class="overlay" style="flex-grow: 1;">
             <ui:Label text="Label" class="monospace" style="-unity-text-align: upper-right;">
                 <Bindings>
+                    <ui:DataBinding property="text" data-source-path="dayString" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Label" class="monospace" style="-unity-text-align: upper-right;">
+                <Bindings>
                     <ui:DataBinding property="text" data-source-path="timeString" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
@@ -12,8 +17,10 @@
             <ui:Label text="Daytime" />
             <ui:VisualElement style="flex-grow: 1; height: 120px; bottom: 0; position: absolute; width: 100%; background-color: rgba(120, 120, 120, 0.81); flex-direction: row;">
                 <ui:VisualElement style="flex-grow: 4;" />
-                <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement style="flex-grow: 1; justify-content: space-around;">
                     <ui:Button text="Sleep" name="Sleep" />
+                    <ui:Button text="Credits" name="Credits" />
+                    <ui:Button text="Quit" name="Quit" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <Bindings>
@@ -24,6 +31,13 @@
             <ui:Label text="Nighttime" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showPlaybackMenu" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="Credits" class="overlay" style="flex-grow: 1;">
+            <ui:Label text="Animal Snap&#10;A game by Daniel Schulz&#10;&#10;Third-party assets used:&#10;LowPoly Environment Pack&#10;Quirky Series ULTIMATE Pack" style="-unity-text-align: upper-center;" />
+            <ui:Button text="Back" name="Back" />
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="showCreditsMenu" binding-mode="ToTarget" />
             </Bindings>
         </ui:VisualElement>
     </ui:VisualElement>

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Game {
@@ -9,11 +11,32 @@ namespace Game {
         GameStateAsset asset;
 
         void Start() {
-            document.rootVisualElement.Q<Button>("Sleep").clicked += OnSleep;
+            RegisterCallback("Sleep", () => asset.mode = GameMode.Night);
+            RegisterCallback("Credits", () => asset.mode = GameMode.Credits);
+            RegisterCallback("Back", () => asset.mode = GameMode.Day);
+
+            document.rootVisualElement.Q<Button>("Quit").clicked += OnQuit;
+        }
+
+        void RegisterCallback(string name, Action callback) {
+            foreach (var button in document.rootVisualElement.Query(name).Build().OfType<Button>()) {
+                button.clicked += callback;
+            }
         }
 
         void OnSleep() {
             asset.mode = GameMode.Night;
+        }
+
+        void OnCredits() {
+            asset.mode = GameMode.Credits;
+        }
+
+        void OnQuit() {
+            Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.ExitPlaymode();
+#endif
         }
     }
 }
