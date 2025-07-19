@@ -1,16 +1,23 @@
-using Slothsoft.UnityExtensions;
 using UnityEngine;
 
 namespace Game {
     sealed class Sun : MonoBehaviour {
         [SerializeField]
+        Light attachedLight;
+        [SerializeField]
         GameStateAsset asset;
+        [SerializeField]
+        Vector3 referencePosition = Vector3.one;
 
-        void Update() {
-            float t = asset.time / 86400f;
-            float elevation = Mathf.Cos((t * 2 * Mathf.PI) + Mathf.PI) * 90f;
+        void LateUpdate() {
+            var position = referencePosition;
+            position.x = Mathf.Sin((asset.normalizedTime * 2 * Mathf.PI) + Mathf.PI);
+            position.y = Mathf.Cos((asset.normalizedTime * 2 * Mathf.PI) + Mathf.PI);
 
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.WithX(elevation));
+            transform.position = position;
+            transform.LookAt(Vector3.zero);
+
+            attachedLight.intensity = asset.sunIntensity;
         }
     }
 }
