@@ -23,6 +23,9 @@ namespace Game {
         [CreateProperty(ReadOnly = true)]
         bool showCreditsMenu => mode is GameMode.Credits;
 
+        [CreateProperty(ReadOnly = true)]
+        bool showHelpMenu => mode is GameMode.Help;
+
         [SerializeField]
         internal float time = NOON;
         [SerializeField]

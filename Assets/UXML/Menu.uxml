@@ -29,7 +29,8 @@
                     </ui:TabView>
                 </ui:VisualElement>
                 <ui:VisualElement class="buttonList">
-                    <ui:Button text="Sleep" name="Sleep" />
+                    <ui:Button text="Pass time" name="Sleep" class="important" />
+                    <ui:Button text="Help" name="Help" />
                     <ui:Button text="Credits" name="Credits" />
                     <ui:Button text="Quit" name="Quit" />
                 </ui:VisualElement>
@@ -54,6 +55,13 @@
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showCreditsMenu" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="HelpScreen" class="overlay">
+            <ui:Label text="Take photographs of the local wildlife!&#10;&#10;To do that:&#10;- Place objects (TODO)&#10;- Pass time&#10;- Watch animals appear (TODO)&#10;- Take photos&#10;- Repeat!" />
+            <ui:Button text="Back" name="Back" />
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="showHelpMenu" binding-mode="ToTarget" />
             </Bindings>
         </ui:VisualElement>
     </ui:VisualElement>

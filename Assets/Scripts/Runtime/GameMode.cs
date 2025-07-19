@@ -4,5 +4,6 @@
         Day,
         Night,
         Credits,
+        Help,
     }
 }

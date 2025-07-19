@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace Game {
     [UxmlElement]
-    sealed partial class SnapshotThumbnail : VisualElement {
+    sealed partial class SnapshotThumbnail : Button {
         internal static readonly BindingId textureProperty = new(nameof(texture));
 
         readonly Image _image = new() {
@@ -13,6 +13,7 @@ namespace Game {
 
         public SnapshotThumbnail() {
             Add(_image);
+            AddToClassList(ussClassName);
         }
 
         [UxmlAttribute]

@@ -17,6 +17,7 @@ namespace Game {
         void Start() {
             RegisterCallback("Sleep", asset.Sleep);
             RegisterCallback("Credits", () => asset.mode = GameMode.Credits);
+            RegisterCallback("Help", () => asset.mode = GameMode.Help);
             RegisterCallback("Back", () => asset.mode = GameMode.Day);
             RegisterCallback("Quit", OnQuit);
             RegisterCallback("Camera", OnCamera);

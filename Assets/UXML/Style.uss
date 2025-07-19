@@ -28,29 +28,31 @@
     padding: 0;
 }
 
-Button.unity-button {
+.unity-button {
     background-color: var(--color-purple-darkest);
     color: var(--color-neutral-light);
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
+    margin: 0;
 }
 
-Button.unity-button:active {
+.unity-button:active {
     color: var(--color-yellow);
 }
 
-Button.unity-button:hover {
+.unity-button:hover {
     background-color: var(--color-purple-dark);
 }
 
-Button.unity-button:focus {
+.unity-button:focus {
     border-color: var(--color-blue);
 }
 
-Button.unity-button:disabled {
+.unity-button:disabled {
     color: var(--color-neutral-medium);
+}
+
+.unity-button.important {
+	flex-grow: 1;
+	font-size: 40px;
 }
 
 Hyperlink.unity-label {
@@ -128,24 +130,25 @@ Button#Camera:active {
 
 #Snapshots SimpleListView {
     flex-direction: row;
+	flex-wrap: wrap;
 }
 
-SnapshotThumbnail {
+SnapshotThumbnail.unity-button {
     width: 128px;
     height: 72px;
-    margin: 8px;
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-left-color: var(--color-teal);
-    border-right-color: var(--color-teal);
-    border-top-color: var(--color-teal);
-    border-bottom-color: var(--color-teal);
+    margin: 0;
+	padding: 0;
+	border-width: 6px;
+    border-color: var(--color-blue);
+}
+SnapshotThumbnail.unity-button:hover {
+    border-color: var(--color-cyan);
+}
+SnapshotThumbnail.unity-button:active {
+    border-color: var(--color-yellow);
+}
+SnapshotThumbnail.unity-button:focus {
+    border-color: var(--color-purple-dark);
 }
 
 SnapshotThumbnail > Image {
@@ -171,7 +174,7 @@ SnapshotThumbnail > Image {
 flex-grow: 1; justify-content: space-between;
 }
 
-#CreditsScreen {
+#CreditsScreen, #HelpScreen {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
