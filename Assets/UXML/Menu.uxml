@@ -18,7 +18,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="ActionMenu" class="overlay">
             <ui:VisualElement name="Bar">
-                <ui:VisualElement style="flex-grow: 4;">
+                <ui:VisualElement>
                     <ui:TabView>
                         <ui:Tab label="Objects" />
                         <ui:Tab label="Photos">
