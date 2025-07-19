@@ -6,11 +6,76 @@
 
 Label {
     -unity-font-style: bold;
-    color: rgb(255, 255, 255);
-    -unity-text-outline-width: 10px;
-    -unity-text-outline-color: rgb(0, 0, 0);
+    -unity-text-outline-width: 4px;
+    -unity-text-outline-color: var(--color-neutral-dark);
+    color: var(--color-neutral-light);
 }
 
 .monospace {
     -unity-font-definition: resource('FlatSkin/Font/Roboto-Medium');
+}
+
+Button.unity-button {
+    background-color: var(--color-purple-darkest);
+    color: var(--color-neutral-light);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+Button.unity-button:active {
+    color: var(--color-yellow);
+}
+
+Button.unity-button:hover {
+    background-color: var(--color-purple-dark);
+}
+
+Button.unity-button:focus {
+    border-color: var(--color-blue);
+}
+
+Button.unity-button:disabled {
+    color: var(--color-neutral-medium);
+}
+
+#unity-tab__header {
+    background-color: var(--color-teal);
+}
+
+TabView Label {
+    color: var(--color-neutral-lightest);
+}
+
+TabView {
+    flex-grow: 1;
+}
+
+Tab {
+    flex-grow: 1;
+}
+
+#unity-tab-view__content-container {
+    flex-grow: 1;
+}
+
+#unity-tab__content-container {
+    flex-grow: 1;
+}
+
+#unity-tab__header-underline {
+    background-color: var(--color-teal);
+}
+
+#unity-tab__header:checked {
+    background-color: var(--color-blue);
+}
+
+#unity-tab__content-container {
+    background-color: var(--color-blue);
+}
+
+#unity-tab__header-image {
+    -unity-background-image-tint-color: var(--color-cyan);
 }
