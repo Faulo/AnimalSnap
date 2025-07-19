@@ -6,9 +6,12 @@ namespace Game {
         [SerializeField, Expandable]
         GameStateAsset asset;
 
-        void Start() {
-            asset.time = 12 * 60 * 60;
-            asset.mode = GameMode.Day;
+        void OnEnable() {
+            ResetState();
+        }
+
+        void OnDisable() {
+            ResetState();
         }
 
         void FixedUpdate() {
@@ -17,6 +20,11 @@ namespace Game {
                     asset.time += Time.deltaTime * asset.timeMultiplier;
                     break;
             }
+        }
+
+        void ResetState() {
+            asset.time = 12 * 60 * 60;
+            asset.mode = GameMode.Day;
         }
     }
 }

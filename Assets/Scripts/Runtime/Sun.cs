@@ -1,20 +1,26 @@
 using UnityEngine;
 
 namespace Game {
+    [ExecuteAlways]
     sealed class Sun : MonoBehaviour {
         [SerializeField]
         Light attachedLight;
         [SerializeField]
         GameStateAsset asset;
         [SerializeField]
-        Vector3 referencePosition = Vector3.one;
+        float sunDepth = 1;
 
         void LateUpdate() {
-            var position = referencePosition;
-            position.x = Mathf.Sin((asset.normalizedTime * 2 * Mathf.PI) + Mathf.PI);
-            position.y = Mathf.Cos((asset.normalizedTime * 2 * Mathf.PI) + Mathf.PI);
+            if (!asset || !attachedLight) {
+                return;
+            }
 
-            transform.position = position;
+            transform.position = new Vector3 {
+                x = Mathf.Sin((asset.normalizedTime * 2 * Mathf.PI) + Mathf.PI),
+                y = Mathf.Cos((asset.normalizedTime * 2 * Mathf.PI) + Mathf.PI),
+                z = sunDepth
+            };
+
             transform.LookAt(Vector3.zero);
 
             attachedLight.intensity = asset.sunIntensity;
