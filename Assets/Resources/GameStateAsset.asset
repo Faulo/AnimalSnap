@@ -19,7 +19,8 @@ MonoBehaviour:
   timeScaleSlow: 0.5
   timeScaleMid: 1
   timeScaleFast: 10
-  timeScaleVeryFast: 50
+  timeScaleFastest: 50
+  timeScaleMode: 3
   sunStrength: 2
   startingSnapshots: []
   snapshots: []

@@ -49,11 +49,22 @@ namespace Game {
         [SerializeField]
         float timeScaleMid = 1f;
         [SerializeField]
-        float timeScaleFast = 5f;
+        float timeScaleFast = 10f;
         [SerializeField]
-        float timeScaleVeryFast = 10f;
+        float timeScaleFastest = 50f;
 
-        internal float timeScale => timeScaleVeryFast;
+        internal float timeScale => timeScaleMode switch {
+            TimeScale.Pause => 0,
+            TimeScale.Slow => timeScaleSlow,
+            TimeScale.Mid => timeScaleMid,
+            TimeScale.Fast => timeScaleFast,
+            TimeScale.Fastest => timeScaleFastest,
+            _ => throw new NotImplementedException(),
+        };
+
+        [SerializeField]
+        [CreateProperty]
+        TimeScale timeScaleMode = TimeScale.Fast;
 
         [CreateProperty(ReadOnly = true)]
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
