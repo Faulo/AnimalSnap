@@ -17,37 +17,7 @@ MonoBehaviour:
   timeEnd: 129600
   timeMultiplier: 10000
   sunStrength: 2
-  startingSnapshots:
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
-  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
+  startingSnapshots: []
   snapshots:
   - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
   - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
