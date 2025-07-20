@@ -12,7 +12,9 @@ namespace Game {
         internal const int DAY = 24 * 60 * 60;
 
         [CreateProperty(ReadOnly = true)]
-        string projectName => $"{Application.productName} v{Application.version}";
+        string projectName => Application.productName;
+        [CreateProperty(ReadOnly = true)]
+        string projectAndVersion => $"{Application.productName} v{Application.version}";
 
         [SerializeField]
         internal GameMode mode = GameMode.Nothing;
@@ -109,6 +111,10 @@ namespace Game {
             snapshots.Clear();
 
             snapshots.AddRange(startingSnapshots);
+
+#if UNITY_EDITOR
+            UnityEditor.EditorUtility.SetDirty(this);
+#endif
         }
 
         [SerializeField]

@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UXML/Style.uss?fileID=7433441132597879392&amp;guid=a096dc41080015a47b0b99f82b788345&amp;type=3#Style" />
-    <Style src="project://database/Assets/UXML/Colors.uss?fileID=7433441132597879392&amp;guid=4652ec8c5f6421948bb889e9afd53579&amp;type=3#Colors" />
+    <Style src="project://database/Assets/UXML/Style.uss?fileID=7433441132597879392&amp;guid=a096dc41080015a47b0b99f82b788345&amp;type=3" />
+    <Style src="project://database/Assets/UXML/Colors.uss?fileID=7433441132597879392&amp;guid=4652ec8c5f6421948bb889e9afd53579&amp;type=3" />
     <ui:VisualElement data-source="project://database/Assets/Resources/GameStateAsset.asset?fileID=11400000&amp;guid=48cde409ee76a834cb81c6cdceac0ef1&amp;type=2#GameStateAsset" name="VisualElement" picking-mode="Ignore" class="overlay">
         <ui:VisualElement name="VisualElement" picking-mode="Ignore" class="overlay">
             <ui:VisualElement name="Clock" picking-mode="Ignore">
@@ -17,7 +17,7 @@
             </ui:VisualElement>
             <ui:Label text="Sloth Garden" picking-mode="Ignore" name="ProjectName" style="position: absolute;">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="projectName" binding-mode="ToTarget" />
+                    <ui:DataBinding property="text" data-source-path="projectAndVersion" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>
@@ -61,21 +61,32 @@
             </Bindings>
         </ui:VisualElement>
         <ui:VisualElement name="CreditsScreen" class="overlay">
-            <ui:Label text="Animal Snap&#10;A game by Daniel Schulz&#10;&#10;Third-party assets used:" />
-            <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/environments/landscapes/lowpoly-environment-pack-99479" text="LowPoly Environment Pack" />
-            <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-ultimate-pack-209771" text="Quirky Series ULTIMATE Pack" />
-            <Game.Hyperlink href="assetstore.unity.com/packages/p/fruits-lowpoly-pack-lite-273980" text="Fruits LowPoly Pack Lite" />
-            <Game.Hyperlink href="https://lospec.com/palette-list/12j4nk" text="12j4nk Palette" />
-            <Game.Hyperlink href="https://www.1001fonts.com/digital-dismay-font.html" text="Digital Dismay Font" />
-            <Game.Hyperlink href="https://fonts.google.com/specimen/Happy+Monkey" text="Happy Monkey Font" />
-            <Game.Hyperlink href="https://github.com/Faulo/net.slothsoft.unity-extensions" text="Slothsoft&apos;s Unity Extensions" />
+            <ui:VisualElement class="panel">
+				<ui:VisualElement class="panel-background"/>
+                <ui:Label text="Label" class="important">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="projectName" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text="A game by Daniel Schulz&#10;&#10;Third-party assets used:" />
+                <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/environments/landscapes/lowpoly-environment-pack-99479" text="LowPoly Environment Pack" />
+                <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-ultimate-pack-209771" text="Quirky Series ULTIMATE Pack" />
+                <Game.Hyperlink href="assetstore.unity.com/packages/p/fruits-lowpoly-pack-lite-273980" text="Fruits LowPoly Pack Lite" />
+                <Game.Hyperlink href="https://lospec.com/palette-list/12j4nk" text="12j4nk Palette" />
+                <Game.Hyperlink href="https://www.1001fonts.com/digital-dismay-font.html" text="Digital Dismay Font" />
+                <Game.Hyperlink href="https://fonts.google.com/specimen/Happy+Monkey" text="Happy Monkey Font" />
+                <Game.Hyperlink href="https://github.com/Faulo/net.slothsoft.unity-extensions" text="Slothsoft&apos;s Unity Extensions" />
+            </ui:VisualElement>
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showCreditsMenu" binding-mode="ToTarget" />
             </Bindings>
         </ui:VisualElement>
         <ui:VisualElement name="HelpScreen" class="overlay">
-            <ui:Label text="Take photographs of the local wildlife!&#10;&#10;To do that:&#10;- Place objects&#10;- Pass time&#10;- Watch animals appear&#10;- Take photos&#10;- Unlock achievements (TODO)&#10;- Repeat!" />
+            <ui:VisualElement class="panel">
+				<ui:VisualElement class="panel-background"/>
+                <ui:Label text="Take photographs of the local wildlife!&#10;&#10;To do that:&#10;- Place objects&#10;- Pass time&#10;- Watch animals appear&#10;- Take photos&#10;- Unlock achievements (TODO)&#10;- Repeat!" />
+            </ui:VisualElement>
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showHelpMenu" binding-mode="ToTarget" />
