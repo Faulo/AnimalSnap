@@ -6,8 +6,9 @@ namespace Game {
     [UxmlElement]
     sealed partial class ButtonList : SimpleListView {
         internal static readonly BindingId selectionProperty = new(nameof(selection));
+        internal static readonly BindingId sourceProperty = new(nameof(selectionSource));
 
-        internal event Action<object> onSelectionChange;
+        internal event Action<Button> onSelectionChange;
 
         Button _selection;
 
@@ -21,9 +22,15 @@ namespace Game {
                     _selection = value;
                     _selection?.AddToClassList("active");
                     NotifyPropertyChanged(selectionProperty);
+                    NotifyPropertyChanged(sourceProperty);
                     onSelectionChange?.Invoke(value);
                 }
             }
+        }
+
+        [CreateProperty]
+        internal object selectionSource {
+            get => _selection is { dataSource: { } source } ? source : null;
         }
 
         public ButtonList() {

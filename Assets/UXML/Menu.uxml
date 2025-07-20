@@ -26,8 +26,7 @@
                         <ui:Tab label="Photos">
                             <ui:ScrollView name="Snapshots" />
                         </ui:Tab>
-                        <ui:Tab label="Animals" />
-                        <ui:Tab label="Options" />
+                        <ui:Tab label="Achievements" />
                     </ui:TabView>
                 </ui:VisualElement>
                 <ui:VisualElement class="buttonList">
@@ -37,6 +36,12 @@
                     <ui:Button text="Quit" name="Quit" />
                 </ui:VisualElement>
             </ui:VisualElement>
+            <ui:Image name="Photo">
+                <Bindings>
+                    <ui:DataBinding property="style.display" data-source-path="hasSelectedSnapshot" binding-mode="ToTarget" />
+                    <ui:DataBinding property="image" data-source-path="selectedSnapshot.texture" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Image>
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showActionMenu" binding-mode="ToTarget" />
             </Bindings>

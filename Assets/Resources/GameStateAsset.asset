@@ -24,6 +24,7 @@ MonoBehaviour:
   sunStrength: 2
   startingSnapshots: []
   snapshots: []
+  selectedSnapshot: {fileID: 0}
   objects:
   - {fileID: 11400000, guid: a4ce144eb8d22bf4eb16fffa06d38888, type: 2}
   - {fileID: 11400000, guid: 8d6dd527cbb478e4581423209d51453d, type: 2}

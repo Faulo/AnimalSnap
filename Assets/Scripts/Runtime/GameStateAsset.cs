@@ -90,6 +90,7 @@ namespace Game {
             time = 12 * 60 * 60;
             mode = GameMode.Day;
             timeScaleMode = TimeScale.Mid;
+            selectedSnapshot = null;
             SetTimeEnd();
 
             foreach (var snapshot in snapshots) {
@@ -112,6 +113,13 @@ namespace Game {
 
         [SerializeField]
         internal List<Snapshot> snapshots = new();
+
+        [SerializeField]
+        [CreateProperty]
+        internal Snapshot selectedSnapshot;
+
+        [CreateProperty(ReadOnly = true)]
+        internal bool hasSelectedSnapshot => selectedSnapshot;
 
         [SerializeField]
         internal List<FruitAsset> objects = new();

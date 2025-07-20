@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -13,7 +14,9 @@ namespace Game {
         [SerializeField]
         Camera attachedCamera;
 
-        SimpleListView snapshotsList;
+        VisualElement photo;
+
+        ButtonList snapshotsList;
 
         void Start() {
             RegisterCallback("Sleep", asset.Sleep);
@@ -66,6 +69,14 @@ namespace Game {
             }
         }
 
+        [CreateProperty]
+        Snapshot selectedSnapshot => snapshotsList.selection is { dataSource: Snapshot snapshot }
+            ? snapshot
+            : default;
+
+        [CreateProperty]
+        bool hasSelectedSnapshot => snapshotsList.selection is { dataSource: Snapshot };
+
         ISpawnable currentSpawnable;
         GameObject preview;
 
@@ -96,7 +107,7 @@ namespace Game {
         void InitializeSnapshots() {
             var snapshotsContainer = document.rootVisualElement.Q<VisualElement>("Snapshots");
 
-            snapshotsList = new SimpleListView {
+            snapshotsList = new ButtonList {
                 makeItem = () => {
                     var item = new SnapshotThumbnail();
                     item.SetBinding(SnapshotThumbnail.textureProperty, new DataBinding() {
@@ -109,6 +120,10 @@ namespace Game {
             };
 
             snapshotsContainer.Add(snapshotsList);
+
+            snapshotsList.onSelectionChange += button => {
+                asset.selectedSnapshot = button is { dataSource: Snapshot source } ? source : null;
+            };
         }
 
         void InitializePlaybackButtons() {

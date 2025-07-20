@@ -218,7 +218,17 @@ PlaybackButtons .unity-button {
     height: 64px;
 }
 
-
 PlaybackButtons .unity-button.active {
     background-color: var(--color-purple-dark);
+}
+
+#Photo {
+    flex-grow: 0;
+    width: 1360px;
+    align-self: center;
+    height: 800px;
+    background-color: black;
+    border-width: 40px;
+    border-color: var(--color-neutral-lightest);
+    margin-top: 20px;
 }
