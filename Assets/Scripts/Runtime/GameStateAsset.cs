@@ -11,6 +11,9 @@ namespace Game {
         internal const int NOON = 12 * 60 * 60;
         internal const int DAY = 24 * 60 * 60;
 
+        [CreateProperty(ReadOnly = true)]
+        string projectName => $"{Application.productName} v{Application.version}";
+
         [SerializeField]
         internal GameMode mode = GameMode.Nothing;
 

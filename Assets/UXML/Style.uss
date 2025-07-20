@@ -236,3 +236,7 @@ PlaybackButtons .unity-button.active {
 :root {
     -unity-font-definition: resource('Fonts & Materials/HappyMonkey-Regular');
 }
+
+#ProjectName {
+    opacity: 0.8;
+}
