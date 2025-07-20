@@ -59,6 +59,7 @@ namespace Game {
         float timeScaleFastest = 50f;
 
         internal float timeScale => timeScaleMode switch {
+            TimeScale.Stop => 0,
             TimeScale.Pause => 0,
             TimeScale.Slow => timeScaleSlow,
             TimeScale.Mid => timeScaleMid,
@@ -68,9 +69,20 @@ namespace Game {
         };
 
         [SerializeField]
-        [CreateProperty]
-        internal TimeScale timeScaleMode = TimeScale.Mid;
+        TimeScale _timeScaleMode;
 
+        [CreateProperty]
+        internal TimeScale timeScaleMode {
+            get => _timeScaleMode;
+            set {
+                if (value is TimeScale.Stop) {
+                    mode = GameMode.Day;
+                    return;
+                }
+
+                _timeScaleMode = value;
+            }
+        }
         [CreateProperty(ReadOnly = true)]
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
 

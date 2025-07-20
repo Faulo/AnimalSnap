@@ -1,5 +1,6 @@
 ﻿namespace Game {
     enum TimeScale {
+        Stop,
         Pause,
         Slow,
         Mid,

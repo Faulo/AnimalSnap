@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UXML/Style.uss?fileID=7433441132597879392&amp;guid=a096dc41080015a47b0b99f82b788345&amp;type=3" />
-    <Style src="project://database/Assets/UXML/Colors.uss?fileID=7433441132597879392&amp;guid=4652ec8c5f6421948bb889e9afd53579&amp;type=3" />
+    <Style src="project://database/Assets/UXML/Style.uss?fileID=7433441132597879392&amp;guid=a096dc41080015a47b0b99f82b788345&amp;type=3#Style" />
+    <Style src="project://database/Assets/UXML/Colors.uss?fileID=7433441132597879392&amp;guid=4652ec8c5f6421948bb889e9afd53579&amp;type=3#Colors" />
     <ui:VisualElement data-source="project://database/Assets/Resources/GameStateAsset.asset?fileID=11400000&amp;guid=48cde409ee76a834cb81c6cdceac0ef1&amp;type=2#GameStateAsset" name="VisualElement" picking-mode="Ignore" class="overlay">
         <ui:VisualElement name="VisualElement" picking-mode="Ignore" class="overlay">
             <ui:VisualElement name="Clock" picking-mode="Ignore">
@@ -55,14 +55,14 @@
         </ui:VisualElement>
         <ui:VisualElement name="PlaybackMenu" class="overlay">
             <ui:Button name="Camera" />
-            <Game.PlaybackButtons pause-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-2891556694463309217&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Pause_0.aseprite" slow-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-1242682827576884657&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Slow_0.aseprite" mid-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-5115358515376399775&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Mid_0.aseprite" fast-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-2209775234989312156&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Fast_0.aseprite" fastest-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-5451069353435918704&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Fastest_0.aseprite" name="PlaybackButtons" />
+            <Game.PlaybackButtons pause-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-2891556694463309217&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Pause_0.aseprite" slow-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-1242682827576884657&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Slow_0.aseprite" mid-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-5115358515376399775&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Mid_0.aseprite" fast-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-2209775234989312156&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Fast_0.aseprite" fastest-sprite="project://database/Assets/Art/Icons.aseprite?fileID=-5451069353435918704&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Fastest_0.aseprite" name="PlaybackButtons" stop-sprite="project://database/Assets/Art/Icons.aseprite?fileID=4979376876150585179&amp;guid=dc9a636faca000948915784c24b0f00b&amp;type=3#Icons_Stop_0.aseprite" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showPlaybackMenu" binding-mode="ToTarget" />
             </Bindings>
         </ui:VisualElement>
         <ui:VisualElement name="CreditsScreen" class="overlay">
             <ui:VisualElement class="panel">
-				<ui:VisualElement class="panel-background"/>
+                <ui:VisualElement class="panel-background" />
                 <ui:Label text="Label" class="important">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="projectName" binding-mode="ToTarget" />
@@ -84,7 +84,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="HelpScreen" class="overlay">
             <ui:VisualElement class="panel">
-				<ui:VisualElement class="panel-background"/>
+                <ui:VisualElement class="panel-background" />
                 <ui:Label text="Take photographs of the local wildlife!&#10;&#10;To do that:&#10;- Place objects&#10;- Pass time&#10;- Watch animals appear&#10;- Take photos&#10;- Unlock achievements (TODO)&#10;- Repeat!" />
             </ui:VisualElement>
             <ui:Button text="Back" name="Back" />

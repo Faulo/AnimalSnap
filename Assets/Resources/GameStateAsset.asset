@@ -20,7 +20,7 @@ MonoBehaviour:
   timeScaleMid: 1
   timeScaleFast: 10
   timeScaleFastest: 50
-  timeScaleMode: 2
+  _timeScaleMode: 3
   sunStrength: 2
   startingSnapshots:
   - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}

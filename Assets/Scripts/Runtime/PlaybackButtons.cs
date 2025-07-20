@@ -9,6 +9,7 @@ namespace Game {
         internal static readonly BindingId scaleProperty = new(nameof(scale));
 
         readonly Dictionary<TimeScale, Button> buttons = new() {
+            [TimeScale.Stop] = new(),
             [TimeScale.Pause] = new(),
             [TimeScale.Slow] = new(),
             [TimeScale.Mid] = new(),
@@ -41,6 +42,13 @@ namespace Game {
 
                 NotifyPropertyChanged(scaleProperty);
             }
+        }
+
+        [UxmlAttribute]
+        [CreateProperty]
+        public Sprite stopSprite {
+            get => buttons[TimeScale.Stop].style.backgroundImage.value.sprite;
+            set => buttons[TimeScale.Stop].style.backgroundImage = new(value);
         }
 
         [UxmlAttribute]
