@@ -36,7 +36,7 @@ pipeline {
 							FORMATTING_EXCLUDE : 'Library Assets/Plugins Packages',
 
 							// which executables to create
-							BUILD_FOR_WINDOWS : '0',
+							BUILD_FOR_WINDOWS : '1',
 							BUILD_FOR_LINUX : '0',
 							BUILD_FOR_MAC : '0',
 							BUILD_FOR_WEBGL : '1',
@@ -55,8 +55,8 @@ pipeline {
 							STEAM_CREDENTIALS : '',
 
 							// configuration for deploying to itch
-							ITCH_ID : '',
-							ITCH_CREDENTIALS : '',
+							ITCH_ID : 'faulo/sloth-garden',
+							ITCH_CREDENTIALS : 'Faulo-itch.io',
 
 							// configuration for deploying to Discord
 							REPORT_TO_DISCORD : '0',
