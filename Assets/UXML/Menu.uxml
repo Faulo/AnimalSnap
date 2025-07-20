@@ -20,7 +20,9 @@
             <ui:VisualElement name="Bar">
                 <ui:VisualElement>
                     <ui:TabView>
-                        <ui:Tab label="Objects" />
+                        <ui:Tab label="Objects">
+                            <ui:ScrollView name="Objects" />
+                        </ui:Tab>
                         <ui:Tab label="Photos">
                             <ui:ScrollView name="Snapshots" />
                         </ui:Tab>

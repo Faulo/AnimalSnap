@@ -22,7 +22,34 @@ namespace Game {
             RegisterCallback("Quit", OnQuit);
             RegisterCallback("Camera", OnCamera);
 
+            InitializeObjects();
+
+            InitializeSnapshots();
+
+            InitializePlaybackButtons();
+        }
+
+        void InitializeObjects() {
+            var container = document.rootVisualElement.Q<VisualElement>("Objects");
+
+            var list = new SimpleListView {
+                makeItem = () => {
+                    var item = new ObjectThumbnail();
+                    item.SetBinding(ObjectThumbnail.textureProperty, new DataBinding() {
+                        dataSourcePath = new(nameof(FruitAsset.texture)),
+                        bindingMode = BindingMode.ToTarget,
+                    });
+                    return item;
+                },
+                itemsSource = asset.objects,
+            };
+
+            container.Add(list);
+        }
+
+        void InitializeSnapshots() {
             var snapshotsContainer = document.rootVisualElement.Q<VisualElement>("Snapshots");
+
             snapshotsList = new SimpleListView {
                 makeItem = () => {
                     var item = new SnapshotThumbnail();
@@ -36,7 +63,9 @@ namespace Game {
             };
 
             snapshotsContainer.Add(snapshotsList);
+        }
 
+        void InitializePlaybackButtons() {
             var playbackButtons = document.rootVisualElement.Q<PlaybackButtons>();
             playbackButtons.SetBinding(PlaybackButtons.scaleProperty, new DataBinding() {
                 dataSourcePath = new(nameof(GameStateAsset.timeScaleMode)),

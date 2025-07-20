@@ -111,5 +111,8 @@ namespace Game {
 
         [SerializeField]
         internal List<Snapshot> snapshots = new();
+
+        [SerializeField]
+        internal List<FruitAsset> objects = new();
     }
 }
