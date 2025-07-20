@@ -36,6 +36,12 @@ namespace Game {
             };
 
             snapshotsContainer.Add(snapshotsList);
+
+            var playbackButtons = document.rootVisualElement.Q<PlaybackButtons>();
+            playbackButtons.SetBinding(PlaybackButtons.scaleProperty, new DataBinding() {
+                dataSourcePath = new(nameof(GameStateAsset.timeScaleMode)),
+                bindingMode = BindingMode.TwoWay,
+            });
         }
 
         void RegisterCallback(string name, Action callback) {

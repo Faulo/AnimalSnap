@@ -64,7 +64,7 @@ namespace Game {
 
         [SerializeField]
         [CreateProperty]
-        TimeScale timeScaleMode = TimeScale.Fast;
+        internal TimeScale timeScaleMode = TimeScale.Fast;
 
         [CreateProperty(ReadOnly = true)]
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
