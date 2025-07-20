@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 283c2a73be2ff274abe5a6c1e1ee3a48
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99479
+  packageName: LowPoly Environment Pack
+  packageVersion: 
+  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Plant_4.fbx
+  uploadId: 0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -120,10 +127,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 99479
-  packageName: LowPoly Environment Pack
-  packageVersion: 
-  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Plant_4.fbx
-  uploadId: 0

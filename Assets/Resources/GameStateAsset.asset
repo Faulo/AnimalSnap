@@ -20,9 +20,13 @@ MonoBehaviour:
   timeScaleMid: 1
   timeScaleFast: 10
   timeScaleFastest: 50
-  timeScaleMode: 4
+  timeScaleMode: 2
   sunStrength: 2
   startingSnapshots: []
   snapshots: []
   objects:
   - {fileID: 11400000, guid: a4ce144eb8d22bf4eb16fffa06d38888, type: 2}
+  - {fileID: 11400000, guid: 8d6dd527cbb478e4581423209d51453d, type: 2}
+  - {fileID: 11400000, guid: ae8156ed939f89b42bffe6f7744d215a, type: 2}
+  - {fileID: 11400000, guid: a5fa70182a383b7438a63d3a7a3d42d9, type: 2}
+  - {fileID: 11400000, guid: a31b5a19d003d5947991d3559be3a289, type: 2}

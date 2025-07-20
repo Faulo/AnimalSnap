@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 namespace Game {
     [UxmlElement]
-    sealed partial class SimpleListView : BindableElement {
+    partial class SimpleListView : BindableElement {
         public Func<VisualElement> makeItem;
 
         IList _itemsSource;
@@ -38,6 +38,10 @@ namespace Game {
             }
         }
 
+        public SimpleListView() {
+            AddToClassList("simpleListView");
+        }
+
         internal void Update() {
             int newSize = _itemsSource is null
                 ? -1
@@ -66,8 +70,13 @@ namespace Game {
             return sections[sectionIndex];
         }
 
-        void Rebuild() {
+        readonly List<VisualElement> _elements = new();
+
+        protected IReadOnlyList<VisualElement> elements => _elements;
+
+        protected virtual void Rebuild() {
             sections.Clear();
+            _elements.Clear();
 
             Clear();
 
@@ -82,6 +91,7 @@ namespace Game {
                 var element = makeItem();
                 element.dataSource = _itemsSource[i];
                 GetSectionForElement(i).Add(element);
+                _elements.Add(element);
                 builtSize++;
             }
         }

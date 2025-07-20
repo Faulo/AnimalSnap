@@ -128,7 +128,7 @@ Button#Camera:active {
     -unity-background-image-tint-color: rgba(255, 255, 255, 0.5);
 }
 
-SimpleListView {
+.simpleListView {
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -144,7 +144,7 @@ SimpleListView {
     border-color: var(--color-cyan);
 }
 
-.thumbnail.unity-button:active {
+.thumbnail.unity-button.active {
     border-color: var(--color-yellow);
 }
 

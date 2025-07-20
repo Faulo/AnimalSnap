@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 34dfeb3f659c70946a7698f1846d752b
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99479
+  packageName: LowPoly Environment Pack
+  packageVersion: 
+  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Grass_1.fbx
+  uploadId: 0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -120,10 +127,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 99479
-  packageName: LowPoly Environment Pack
-  packageVersion: 
-  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Grass_1.fbx
-  uploadId: 0

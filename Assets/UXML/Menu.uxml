@@ -1,8 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UXML/Style.uss?fileID=7433441132597879392&amp;guid=a096dc41080015a47b0b99f82b788345&amp;type=3#Style" />
     <Style src="project://database/Assets/UXML/Colors.uss?fileID=7433441132597879392&amp;guid=4652ec8c5f6421948bb889e9afd53579&amp;type=3#Colors" />
-    <ui:VisualElement data-source="project://database/Assets/Resources/GameStateAsset.asset?fileID=11400000&amp;guid=48cde409ee76a834cb81c6cdceac0ef1&amp;type=2#GameStateAsset" name="VisualElement" class="overlay">
-        <ui:VisualElement class="overlay">
+    <ui:VisualElement data-source="project://database/Assets/Resources/GameStateAsset.asset?fileID=11400000&amp;guid=48cde409ee76a834cb81c6cdceac0ef1&amp;type=2#GameStateAsset" name="VisualElement" picking-mode="Ignore" class="overlay">
+        <ui:VisualElement name="VisualElement" picking-mode="Ignore" class="overlay">
             <ui:VisualElement name="Clock">
                 <ui:Label text="Label" class="monospace">
                     <Bindings>
@@ -16,7 +16,7 @@
                 </ui:Label>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="ActionMenu" class="overlay">
+        <ui:VisualElement name="ActionMenu" picking-mode="Ignore" class="overlay">
             <ui:VisualElement name="Bar">
                 <ui:VisualElement>
                     <ui:TabView>

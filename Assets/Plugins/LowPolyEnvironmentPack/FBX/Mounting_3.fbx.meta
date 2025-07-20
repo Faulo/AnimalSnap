@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 492031f9cbc117d419c5271ccc50b76a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99479
+  packageName: LowPoly Environment Pack
+  packageVersion: 
+  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Mounting_3.fbx
+  uploadId: 0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -50,7 +57,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 0
@@ -120,10 +127,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 99479
-  packageName: LowPoly Environment Pack
-  packageVersion: 
-  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Mounting_3.fbx
-  uploadId: 0

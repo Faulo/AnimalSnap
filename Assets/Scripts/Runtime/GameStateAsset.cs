@@ -64,7 +64,7 @@ namespace Game {
 
         [SerializeField]
         [CreateProperty]
-        internal TimeScale timeScaleMode = TimeScale.Fast;
+        internal TimeScale timeScaleMode = TimeScale.Mid;
 
         [CreateProperty(ReadOnly = true)]
         string timeString => $"{timeInHours % 24:D2}:{timeInMinutes % 60:D2}";
@@ -89,6 +89,7 @@ namespace Game {
         internal void ResetState() {
             time = 12 * 60 * 60;
             mode = GameMode.Day;
+            timeScaleMode = TimeScale.Mid;
             SetTimeEnd();
 
             foreach (var snapshot in snapshots) {

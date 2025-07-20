@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace Game {
@@ -29,10 +30,12 @@ namespace Game {
             InitializePlaybackButtons();
         }
 
+        ButtonList objectList;
+
         void InitializeObjects() {
             var container = document.rootVisualElement.Q<VisualElement>("Objects");
 
-            var list = new SimpleListView {
+            objectList = new ButtonList {
                 makeItem = () => {
                     var item = new ObjectThumbnail();
                     item.SetBinding(ObjectThumbnail.textureProperty, new DataBinding() {
@@ -44,7 +47,50 @@ namespace Game {
                 itemsSource = asset.objects,
             };
 
-            container.Add(list);
+            container.Add(objectList);
+        }
+
+        void Update() {
+            if (asset.mode is GameMode.Day
+            && Pointer.current is { position: { value: Vector2 position2D } }
+            && document.runtimePanel.Pick(position2D) is null
+            && Physics.Raycast(attachedCamera.ScreenPointToRay(position2D), out var hit)
+            && objectList is { selection: { dataSource: ISpawnable { canSpawn: true } spawnable } }) {
+                SetSpawnable(spawnable, hit.point);
+
+                if (Pointer.current.press.wasReleasedThisFrame) {
+                    preview = null;
+                }
+            } else {
+                ClearSpawnable();
+            }
+        }
+
+        ISpawnable currentSpawnable;
+        GameObject preview;
+
+        void SetSpawnable(ISpawnable spawnable, Vector3 position) {
+            if (currentSpawnable != spawnable) {
+                ClearSpawnable();
+            }
+
+            currentSpawnable = spawnable;
+            if (!preview && spawnable is not null) {
+                preview = spawnable.Spawn();
+            }
+
+            if (preview) {
+                preview.transform.position = position;
+            }
+        }
+
+        void ClearSpawnable() {
+            currentSpawnable = null;
+
+            if (preview) {
+                Destroy(preview);
+                preview = null;
+            }
         }
 
         void InitializeSnapshots() {
