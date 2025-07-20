@@ -232,3 +232,7 @@ PlaybackButtons .unity-button.active {
     border-color: var(--color-neutral-lightest);
     margin-top: 20px;
 }
+
+:root {
+    -unity-font-definition: resource('Fonts & Materials/HappyMonkey-Regular');
+}

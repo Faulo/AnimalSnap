@@ -26,7 +26,9 @@
                         <ui:Tab label="Photos">
                             <ui:ScrollView name="Snapshots" />
                         </ui:Tab>
-                        <ui:Tab label="Achievements" />
+                        <ui:Tab label="Achievements">
+                            <ui:Label text="TODO .w." />
+                        </ui:Tab>
                     </ui:TabView>
                 </ui:VisualElement>
                 <ui:VisualElement class="buttonList">
@@ -58,8 +60,10 @@
             <ui:Label text="Animal Snap&#10;A game by Daniel Schulz&#10;&#10;Third-party assets used:" />
             <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/environments/landscapes/lowpoly-environment-pack-99479" text="LowPoly Environment Pack" />
             <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-ultimate-pack-209771" text="Quirky Series ULTIMATE Pack" />
+            <Game.Hyperlink href="assetstore.unity.com/packages/p/fruits-lowpoly-pack-lite-273980" text="Fruits LowPoly Pack Lite" />
             <Game.Hyperlink href="https://lospec.com/palette-list/12j4nk" text="12j4nk Palette" />
             <Game.Hyperlink href="https://www.1001fonts.com/digital-dismay-font.html" text="Digital Dismay Font" />
+            <Game.Hyperlink href="https://fonts.google.com/specimen/Happy+Monkey" text="Happy Monkey Font" />
             <Game.Hyperlink href="https://github.com/Faulo/net.slothsoft.unity-extensions" text="Slothsoft&apos;s Unity Extensions" />
             <ui:Button text="Back" name="Back" />
             <Bindings>
@@ -67,7 +71,7 @@
             </Bindings>
         </ui:VisualElement>
         <ui:VisualElement name="HelpScreen" class="overlay">
-            <ui:Label text="Take photographs of the local wildlife!&#10;&#10;To do that:&#10;- Place objects (TODO)&#10;- Pass time&#10;- Watch animals appear (TODO)&#10;- Take photos&#10;- Repeat!" />
+            <ui:Label text="Take photographs of the local wildlife!&#10;&#10;To do that:&#10;- Place objects&#10;- Pass time&#10;- Watch animals appear&#10;- Take photos&#10;- Unlock achievements (TODO)&#10;- Repeat!" />
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showHelpMenu" binding-mode="ToTarget" />

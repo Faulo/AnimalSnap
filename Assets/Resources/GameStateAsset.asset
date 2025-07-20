@@ -22,7 +22,8 @@ MonoBehaviour:
   timeScaleFastest: 50
   timeScaleMode: 2
   sunStrength: 2
-  startingSnapshots: []
+  startingSnapshots:
+  - {fileID: 11400000, guid: 5f4523d38a1ed614fb4bf4ee9306b6d8, type: 2}
   snapshots: []
   selectedSnapshot: {fileID: 0}
   objects:

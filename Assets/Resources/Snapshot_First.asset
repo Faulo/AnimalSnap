@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34892df37f4c0f74dbd879961eb6fb81, type: 3}
-  m_Name: New Snapshot
+  m_Name: Snapshot_First
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 923c02938b1800540bdb08e523b16e85, type: 3}
+  texture: {fileID: 2800000, guid: 60beceb569388da41b6cbf17f109955a, type: 3}
