@@ -121,6 +121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pineapple_LP
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       propertyPath: m_Convex
       value: 1
