@@ -222,3 +222,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99479
+  packageName: LowPoly Environment Pack
+  packageVersion: 
+  assetPath: Assets/Plugins/LowPolyEnvironmentPack/FBX/Tree_3.fbx
+  uploadId: 0
