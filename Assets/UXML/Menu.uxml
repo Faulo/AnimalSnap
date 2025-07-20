@@ -53,6 +53,7 @@
             <Game.Hyperlink href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-ultimate-pack-209771" text="Quirky Series ULTIMATE Pack" />
             <Game.Hyperlink href="https://lospec.com/palette-list/12j4nk" text="12j4nk Palette" />
             <Game.Hyperlink href="https://www.1001fonts.com/digital-dismay-font.html" text="Digital Dismay Font" />
+            <Game.Hyperlink href="https://github.com/Faulo/net.slothsoft.unity-extensions" text="Slothsoft&apos;s Unity Extensions" />
             <ui:Button text="Back" name="Back" />
             <Bindings>
                 <ui:DataBinding property="style.display" data-source-path="showCreditsMenu" binding-mode="ToTarget" />
